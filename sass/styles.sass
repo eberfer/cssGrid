@@ -1,0 +1,52 @@
+*
+    box-sizing: border-box
+
+body    
+    
+    background-color: #f2f2f2
+    font-family: sans-serif
+    font-size: 16px
+
+//la forma mas simple de que las imagenes no se salgan del tamaño del 
+// contenedor es asignarle a la etiqueta "img" un ancho del 100%
+img
+    width: 100%
+
+// display:grid se usa para darle la propiedad a un elemento padre
+// grid-template-columns se usa para asignar el maximo de columnas y el ancho que va a tener cada columna dentro de ese elemento padre
+.navContainer
+    margin: 0px
+    display: grid
+    grid-template-columns: 100fr 100fr 100fr
+// dependiendo la forma en que queramos estructurar nuestra pagina,. usaremos la unidad de medida necesaria.
+
+.navbar
+    border: 1px solid #e00000
+    ul
+        padding: 0px
+        list-style: none 
+        li
+            padding: 10px
+            text-align: center
+            margin: 10px
+            border: solid 1px #000 
+
+//Contenedor de los cubiculos de imagenes    
+.mainContainer
+    padding: 20px
+    margin-top: 20px
+    display: grid
+    grid-template-columns: repeat(3, 1fr) 
+    grid-template-rows: 1fr 1fr
+    gap: 10px
+
+// propiedades de las imagenes
+.img1
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 1
+    grid-row-end: 2
+
+.img3
+    grid-column: 3 / 3
+    
